@@ -1,2 +1,23 @@
 ---
 # tasks file for wake-on-lan
+
+# Installing tlp to fix 16.04 issue https://askubuntu.com/questions/848783/ubuntu-14-04-16-04-wake-on-lan-doesnt-work-while-12-04-works#answer-914283
+
+- name: Install tlp
+  apt: name=tlp state=installed
+  become: yes
+
+
+- name: Enable wake-on-lan WOL_DISABLE=N in /etc/default/tlp
+  lineinfile:
+    dest: "/etc/default/tlp"
+    regexp: "^WOL_DISABLE="
+    line: "WOL_DISABLE=N"
+  become: yes
+
+- name: Disable usb autosuspend USB_AUTOSUSPEND=0 in /etc/default/tlp
+  lineinfile:
+    dest: "/etc/default/tlp"
+    regexp: "^USB_AUTOSUSPEND="
+    line: "USB_AUTOSUSPEND=0"
+  become: yes
