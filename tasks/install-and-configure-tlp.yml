@@ -15,9 +15,9 @@
     line: "WOL_DISABLE=N"
   become: yes
 
-- name: Disable usb autosuspend USB_AUTOSUSPEND=0 in /etc/default/tlp
+- name: Set usb autosuspend USB_AUTOSUSPEND={{ usb_autosuspend }} in /etc/default/tlp
   lineinfile:
     dest: "/etc/default/tlp"
     regexp: "^USB_AUTOSUSPEND="
-    line: "USB_AUTOSUSPEND=0"
+    line: "USB_AUTOSUSPEND={{ usb_autosuspend }}"
   become: yes

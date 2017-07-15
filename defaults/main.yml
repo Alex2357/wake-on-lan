@@ -1,2 +1,4 @@
 ---
 # defaults file for wake-on-lan
+
+usb_autosuspend: 0
