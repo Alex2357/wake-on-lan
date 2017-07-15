@@ -1,7 +1,6 @@
 galaxy_info:
-  author: your name
-  description: your description
-  company: your company (optional)
+  author: alex2357
+  description: WOL ( wake on lan) from S5 state. 
 
   # If the issue tracker for your role is not on github, uncomment the
   # next line and provide a value
@@ -34,7 +33,7 @@ galaxy_info:
   # to your role. If you don't see your platform on this list, let us know,
   # and we'll get it added!
   #
-  #platforms:
+  platforms:
   #- name: OpenBSD
   #  versions:
   #  - all
@@ -129,8 +128,8 @@ galaxy_info:
   #  - 9.1
   #  - 9.2
   #  - 9.3
-  #- name: Ubuntu
-  #  versions:
+  - name: Ubuntu
+    versions:
   #  - all
   #  - lucid
   #  - maverick
@@ -143,10 +142,10 @@ galaxy_info:
   #  - trusty
   #  - utopic
   #  - vivid
-  #  - wily
-  #  - xenial
-  #  - yakkety
-  #  - zesty
+    - wily
+    - xenial
+    - yakkety
+    - zesty
   #- name: Debian
   #  versions:
   #  - all

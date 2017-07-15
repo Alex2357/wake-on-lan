@@ -1,7 +1,9 @@
 Role Name
 =========
 
-Enables wake-on-lan.
+Enables wake-on-lan. Doesn't require WOL to be configured using ethtool.
+Tested this role it works on 16.04.01 without it. So, you don't need anything like
+what done here https://github.com/ansible-roles/ansible-role-wol/blob/master/tasks/main.yml
 
 Requirements
 ------------
