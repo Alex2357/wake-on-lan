@@ -5,6 +5,9 @@
 
 - name: Install tlp
   apt: name=tlp state=installed
+  register: result
+  until: result|success
+  retries: 7  
   become: yes
 
 
