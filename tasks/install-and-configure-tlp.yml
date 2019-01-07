@@ -4,7 +4,7 @@
 # Installing tlp to fix 16.04 issue https://askubuntu.com/questions/848783/ubuntu-14-04-16-04-wake-on-lan-doesnt-work-while-12-04-works#answer-914283
 
 - name: Install tlp
-  apt: name=tlp state=installed
+  apt: name=tlp state=present
   register: result
   until: result|success
   retries: 7  
